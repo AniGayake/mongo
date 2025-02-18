@@ -1,6 +1,7 @@
 # Step 1: Use an official Maven image to build the project
 FROM maven:3.8.6-openjdk-17-slim AS build
 
+RUN apt-get update && apt-get install -y maven
 # Set the working directory inside the container
 WORKDIR /app
 
